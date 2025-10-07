@@ -1,9 +1,9 @@
-Distributed Training Profiler
+# Distributed Training Profiler
 
 A lightweight research prototype to analyze multi-GPU communication performance and throughput bottlenecks during distributed model training.
 This project was inspired by my work on telemetry-driven ML systems optimization and aims to explore scalable performance profiling techniques for modern deep learning frameworks.
 
-🚀 Overview
+# 🚀 Overview
 
 Modern large-scale training often faces inefficiencies due to communication overhead between GPUs.
 This profiler monitors NCCL, PyTorch DistributedDataParallel (DDP), and TensorBoard metrics to visualize:
@@ -16,7 +16,7 @@ Step latency and throughput under different batch sizes
 
 Communication vs. computation ratio per iteration
 
-⚙️ Implementation
+# ⚙️ Implementation
 
 Framework: PyTorch 2.x, CUDA 12.x
 
@@ -39,13 +39,13 @@ gpu_memory_utilization
 
 latency_histogram.png
 
-🧠 Key Insights (Sample Results)
+# 🧠 Key Insights (Sample Results)
 
 4×A100 setup achieved ~18% improvement in throughput after optimizing bucket_cap_mb and gradient accumulation settings.
 
 Profiling revealed ~23% step time spent in gradient synchronization — mitigated via fused optimizer strategy.
 
-🧩 Future Work
+# 🧩 Future Work
 
 Integrate XLA and TensorRT backends for compiler-level optimization
 
@@ -53,7 +53,7 @@ Extend to JAX and DeepSpeed for broader benchmarking
 
 Automate run comparison with MLflow for reproducibility
 
-📚 Skills & Concepts Demonstrated
+# 📚 Skills & Concepts Demonstrated
 
 Distributed Deep Learning (Data/Model Parallelism, NCCL)
 
@@ -65,7 +65,7 @@ Scalable Experimentation (AWS EC2/SageMaker)
 
 PyTorch DDP, TensorBoard, MLflow Integration
 
-📄 License
+# 📄 License
 
 MIT License © 2025 Partha Yashraj
 
